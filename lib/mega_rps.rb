@@ -61,11 +61,52 @@ class Game
       puts "You Win"
 
 		end
-
-		
 		
 	end
 
+  def play_again?
+
+    puts "Would you like to play again? Y/N"
+
+    if gets.chomp[0].downcase == 'y'
+      true
+    else 
+      false
+    end
+  end
+
 end
+
+class Human
+
+  def move
+    move = gets.chomp[0].downcase
+    move
+  end
+
+
+end
+
+class Computer
+
+  def move
+
+    move = %w[r p s].sample
+
+
+  end
+
+end
+
+
+
+
+
+
+
+
+
+
+
 
 end
