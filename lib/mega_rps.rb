@@ -22,11 +22,33 @@ class Game
 
 	end
 
+
 	def play_game
 
 		print_instructions
-		
 
+		while play_again?
+			@player.move
+			@computer.move
+			print_result
+			play_again?
+		end
+
+	end
+
+
+	def print_instructions
+
+		p "Let's play MEGA Rock, Paper, Scissors!"
+		p "Enter (r)ock, (p)aper, or (s)cissors to make your move >>"
+
+	end
+
+
+	def print_result
+
+		
+		
 	end
 
 end
