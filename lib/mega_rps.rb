@@ -80,8 +80,9 @@ end
 class Human
 
   def move
+
     move = gets.chomp[0].downcase
-    move
+    
   end
 
 
