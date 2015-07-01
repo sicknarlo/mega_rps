@@ -39,13 +39,28 @@ class Game
 
 	def print_instructions
 
-		p "Let's play MEGA Rock, Paper, Scissors!"
-		p "Enter (r)ock, (p)aper, or (s)cissors to make your move >>"
+	p "Let's play MEGA Rock, Paper, Scissors!"
+	p "Enter (r)ock, (p)aper, or (s)cissors to make your move >>"
 
 	end
 
 
+
 	def print_result
+
+		if @player.move == @computer.move
+			puts "Draw"
+		elsif @player.move == 's' && @computer.move == 'r' || 
+					@player.move == 'p' && @computer.move == 's' ||
+					@player.move == 'r' && @computer.move == 'p'
+
+			puts "Computer Wins"
+
+		else
+
+      puts "You Win"
+
+		end
 
 		
 		
